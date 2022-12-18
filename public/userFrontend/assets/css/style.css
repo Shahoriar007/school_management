@@ -212,7 +212,11 @@ input {
     border: 1px solid #e7e7e7;
     border-radius: inherit;
     box-shadow: inherit;
-    min-height: 50px;
+    /* min-height: 50px; */
+}
+
+label.radio-padding {
+    padding-left: 10px;
 }
 
 a.more-btn {

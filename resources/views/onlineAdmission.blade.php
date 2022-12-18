@@ -177,28 +177,28 @@
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="admission_type" name="admission_type" value="hka"
                                                     class="">
-                                                <label class="custom-control-label" for="">হিফয কাম
+                                                <label class="radio-padding" for="">হিফয কাম
                                                     একাডেমিক</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="admission_type" name="admission_type" value="ac"
                                                     class="">
-                                                <label class="custom-control-label" for="">একাডেমিক</label>
+                                                <label class="radio-padding" for="">একাডেমিক</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="admission_type" name="admission_type" value="a"
                                                     class="">
-                                                <label class="custom-control-label" for="">আবাসিক</label>
+                                                <label class="radio-padding" for="">আবাসিক</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="admission_type" name="admission_type" value="dc"
                                                     class="">
-                                                <label class="custom-control-label" for="">ডে-কেয়ার</label>
+                                                <label class="radio-padding" for="">ডে-কেয়ার</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="admission_type" name="admission_type" value="oa"
                                                     class="">
-                                                <label class="custom-control-label" for="">অনাবাসিক</label>
+                                                <label class="radio-padding" for="">অনাবাসিক</label>
                                             </div>
                                             
                                         </div>
@@ -392,12 +392,12 @@
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="transport" name="transport" value="y"
                                                     class="">
-                                                <label class="custom-control-label" for="transport1">প্রয়োজন আছে</label>
+                                                <label class="radio-padding" for="transport1">প্রয়োজন আছে</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="transport" name="transport" value="n"
                                                     class="">
-                                                <label class="custom-control-label" for="transport2">প্রয়োজন নেই</label>
+                                                <label class="radio-padding" for="transport2">প্রয়োজন নেই</label>
                                             </div>
 
                                             
