@@ -151,9 +151,10 @@ class OnlineadmissionController extends Controller
      * @param  \App\Models\Onlineadmission  $onlineadmission
      * @return \Illuminate\Http\Response
      */
-    public function show(Onlineadmission $onlineadmission)
+    public function show()
     {
-        //
+        $onlineAdmInfo = Onlineadmission::all();
+        return view('admin.adminSection.online_applications',compact('onlineAdmInfo'));
     }
 
     /**
