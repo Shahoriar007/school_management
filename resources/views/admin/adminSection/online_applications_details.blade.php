@@ -340,6 +340,32 @@
                                                             </div>
                                                            
                                                         </div><!-- data-item -->
+
+                                                        @php 
+                                                            $value = \App\Models\formlabel::all();
+                                                            $columnName = null;
+                                                            $columnName = "field" . 1 ;
+                                                        @endphp
+
+                                                        @foreach($value as $fields)
+
+                                                            @if($fields->labelName != null)
+
+                                                            <div class="data-item">
+                                                                <div class="data-col">
+                                                                    <span class="data-label">{{ $fields->labelName }}</span>
+                                                                    <span class="data-value"> {{ $adApplicationDetails->$columnName }}</span>
+                                                                </div>
+                                                            
+                                                            </div><!-- data-item -->
+                                                            
+                                                            @endif
+
+                                                        @php 
+                                                            $columnName = "field" . 1 + 1 ;
+                                                        @endphp
+
+                                                        @endforeach
                                                     
                                                 </div><!-- .nk-block -->
                                             </div>
