@@ -24,6 +24,7 @@
 
     @yield('adminDashboard')
     @yield('onlineApplications')
+    @yield('onlineApplicationsDetails')
     
 @include('admin.adminFooter')
 

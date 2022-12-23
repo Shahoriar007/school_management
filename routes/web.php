@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\OnlineadmissionController;
+use App\Http\Controllers\FormlabelController;
 
 
 // General Pages
@@ -91,7 +92,20 @@ Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth:admin', 'verified'])->name('admin.dashboard');
 
+// Admin view
+Route::prefix('admin')->group(function(){
+
+// Student Form Setup_View
+Route::get('/student_applicationForm', [FormlabelController::class, 'show'])->middleware(['auth:admin', 'verified'])->name('studentFormsetupView');
+// Student Form Setup Submit
+Route::post('/student_applicationForm', [FormlabelController::class, 'create'])->middleware(['auth:admin', 'verified'])->name('studentFormsetupSubmit');
+
 // Online Applications
 Route::get('/online_applications', [OnlineadmissionController::class, 'show'])->middleware(['auth:admin', 'verified'])->name('allApplications');
+
+// Online Application details view
+Route::get('/online_applications/{id}', [OnlineadmissionController::class, 'applicationDetails'])->middleware(['auth:admin', 'verified']);
+
+});
 
 require __DIR__.'/adminauth.php';

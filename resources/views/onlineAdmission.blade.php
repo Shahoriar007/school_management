@@ -414,6 +414,22 @@
 
                                             <input type="file" id="photo" name="photo" class="form-light">
                                         </div>
+
+                                        @php 
+                                            $value = \App\Models\formlabel::all();
+                                        @endphp
+
+                                        @foreach($value as $fields)
+
+                                        @if($fields->labelName != null)
+                                        <div class="col-lg-12 form-group"><!---------Required-->
+                                            <label for="">{{ $fields->labelName }}</label>
+                                            <input type="text" id="{{ $fields->relatedField }}" name="{{ $fields->relatedField }}" class="form-control form-light" placeholder="in English">
+                                        </div>
+                                        @endif
+
+                                        @endforeach
+
                                             
                                     </div>
                                 </div>

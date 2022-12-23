@@ -73,7 +73,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 
         <!-- Details Button -->
         <td>
-            <a href="">
+            <a href="{{url('/admin/online_applications')}}/{{$info->id}}">
                 <button type="button" class="btn btn-primary">Details</button>
             </a>
         </td>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Onlineadmission;
+use App\Models\formlabel;
 use Illuminate\Http\Request;
 
 use Image;
@@ -17,6 +18,7 @@ class OnlineadmissionController extends Controller
      */
     public function index()
     {
+        //$value = formlabel::where(['relatedField' => 'field1'])->find('labelName');
         return view('onlineAdmission');
     }
 
@@ -126,23 +128,21 @@ class OnlineadmissionController extends Controller
             
             'transport' => $request->transport,
             'photo' => $save_url,     
+
+            'field1' => $request->field1,
+            'field2' => $request->field2,
+            'field3' => $request->field3,
             
          ]);
 
+         $notification = array(
+            'message' => 'Admission form submitted succesfully!',
+            'alert-type' => 'success'
+        );
+
          // return redirect to same page
-        return redirect()->route('home');
+        return redirect()->route('home')->with($notification);
 
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store()
-    {
-        //
     }
 
     /**
@@ -156,6 +156,13 @@ class OnlineadmissionController extends Controller
         $onlineAdmInfo = Onlineadmission::all();
         return view('admin.adminSection.online_applications',compact('onlineAdmInfo'));
     }
+
+    public function applicationDetails($id)
+    {
+        $adApplicationDetails = Onlineadmission::find($id);
+        return view('admin.adminSection.online_applications_details',compact('adApplicationDetails'));
+    }
+
 
     /**
      * Show the form for editing the specified resource.

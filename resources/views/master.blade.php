@@ -38,6 +38,9 @@
     <!-- ========== Google Fonts ========== -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" 
+     href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
 </head>
 
 <body>
@@ -74,6 +77,28 @@
     <script src="{{ asset('userFrontend/assets/js/loopcounter.js')}}"></script>
     <script src="{{ asset('userFrontend/assets/js/bootsnav.js')}}"></script>
     <script src="{{ asset('userFrontend/assets/js/main.js')}}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"> </script>
+
+<script>
+    @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type','info') }}"
+    switch(type){
+        case 'info':
+            toastr.info(" {{ Session::get('message') }} ");
+        break;
+        case 'success':
+            toastr.success(" {{ Session::get('message') }} ");
+        break;
+        case 'warning':
+            toastr.warning(" {{ Session::get('message') }} ");
+        break;
+        case 'error':
+            toastr.error(" {{ Session::get('message') }} ");
+        break;
+    }
+    @endif
+</script>
 
 
 

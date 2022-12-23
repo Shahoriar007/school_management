@@ -44,6 +44,13 @@
                                 </li> -->
 
                                 <li class="nk-menu-item">
+                                    <a href="{{ route('studentFormsetupView') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-building"></em></span>
+                                        <span class="nk-menu-text">Student Aplication Form Setup</span>
+                                    </a>
+                                </li><!-- .nk-menu-item -->
+
+                                <li class="nk-menu-item">
                                     <a href="{{ route('allApplications') }}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-building"></em></span>
                                         <span class="nk-menu-text">Online Aplications</span><span class="nk-menu-badge">new</span>
