@@ -106,6 +106,12 @@ Route::get('/online_applications', [OnlineadmissionController::class, 'show'])->
 // Online Application details view
 Route::get('/online_applications/{id}', [OnlineadmissionController::class, 'applicationDetails'])->middleware(['auth:admin', 'verified']);
 
+// Online Application class, section, roll input page view
+Route::get('/online_applications_approve/{id}', [OnlineadmissionController::class, 'applicationApproveView'])->middleware(['auth:admin', 'verified']);
+// Online Application class, section, roll input page form
+Route::post('/online_applications_approve/{id}', [OnlineadmissionController::class, 'applicationApproveInput'])->middleware(['auth:admin', 'verified'])->name('admission_form_approve');
+
+
 });
 
 require __DIR__.'/adminauth.php';
